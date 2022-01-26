@@ -1,0 +1,141 @@
+.intro {
+  display: flex;
+  height: 100vh;
+}
+.intro-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-right {
+  flex: 1;
+  position: relative;
+}
+.left-wraper {
+  padding: 50px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.intro-welcome {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.intro-name {
+  font-size: 2.5rem;
+}
+.intro-title {
+  height: 50px;
+  overflow: hidden;
+}
+.intro-title-wraper {
+  height: 100%;
+  animation: move 10s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.intro-title-item {
+  height: 50px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: rgb(27, 128, 94);
+  display: flex;
+  align-items: center;
+}
+
+.intro-bg {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  background-color: #1b805e;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.intro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.intro-icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  animation: dance 0.6s ease-in-out infinite alternate;
+  box-shadow: 0px 4px 4px -5px #000;
+}
+@keyframes dance {
+  90%,
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .intro-title-item {
+    font-size: 1.4rem;
+  }
+  .intro-welcome {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .intro-name {
+    font-size: 2.3rem;
+  }
+  .intro-img {
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 700px) {
+  .intro-title-item {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .intro-welcome {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .intro-name {
+    font-size: 1.5rem;
+  }
+  .intro-desc {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .intro-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 470px) {
+  .intro {
+    flex-direction: column;
+  }
+  .intro-desc {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
